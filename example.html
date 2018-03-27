@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <title>dependency.js example</title>
+
+	<!-- 'dependency.js' relies on jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	
+	<!-- Load 'dependency.js' -->
+    <script src='dependency.js'></script>
+	
+	<!-- Order dependent scripts -->
+    <script src='example/main.js'></script>	<!-- 'example/main.js' depends on 'example/A.js' and 'example/B.js' -->
+    <script src='example/A.js'></script>	<!-- 'example/A.js' depends on 'example/B.js' -->
+    <script src='example/B.js'></script>	<!-- 'example/B.js' doesn't depend on anything -->
+  </head>
+  <body>
+	<h2>Example App with 'dependency.js'</h2>
+	<h4>Check the 'example/*.js' files for more info.</h4>
+
+  </body>
+</html>
